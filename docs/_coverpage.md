@@ -1,0 +1,12 @@
+<!-- _coverpage.md -->
+
+# docsify <small>3.5</small>
+
+> 一个神奇的文档网站生成器。
+
+- 简单、轻便 (压缩后 ~21kB)
+- 无需生成 html 文件
+- 众多主题
+
+[docsify](https://github.com/docsifyjs/docsify/)
+[开始阅读](/guide.md)
