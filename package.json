@@ -1,0 +1,7 @@
+{
+  "name": "docsify",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "docsify serve docs"
+  }
+}
