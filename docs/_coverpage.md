@@ -9,4 +9,4 @@
 - 众多主题
 
 [docsify](https://github.com/docsifyjs/docsify/)
-[开始阅读](/guide.md)
+[开始阅读](/README.md)
