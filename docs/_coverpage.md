@@ -1,12 +1,17 @@
 <!-- _coverpage.md -->
 
-# docsify <small>3.5</small>
+# xueque 的笔记本
 
-> 一个神奇的文档网站生成器。
+> 本站基于 docsify <small>3.5</small>。
 
-- 简单、轻便 (压缩后 ~21kB)
-- 无需生成 html 文件
-- 众多主题
+#### 领域
+
+- 前端 Vue + ElementUI
+- 后端 SpringCloudAlibaba + maven
+- 嵌入式 Stm32 + CMake
+- 运维 DockerCompose
+- 移动端 UniApp
+- 桌面端 Electron
 
 [docsify](https://github.com/docsifyjs/docsify/)
 [开始阅读](/README.md)
