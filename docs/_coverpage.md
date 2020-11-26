@@ -13,5 +13,6 @@
 - 移动端 UniApp
 - 桌面端 Electron
 
-[docsify](https://github.com/docsifyjs/docsify/)
+[docsify github](https://github.com/docsifyjs/docsify/)
+[docsify doc](https://docsify.js.org/#/zh-cn/)
 [开始阅读](/README.md)
