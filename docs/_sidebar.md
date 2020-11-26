@@ -6,4 +6,4 @@
 * [NodeJS](IDE/NodeJS.md )
 * [IDEA](IDE/IDEA.md )
 * [Git](IDE/Git.md )
-* [DockerCompose](DockerCompose/DockerCompose.md )
+* [DockerCompose](docs/Docker/DockerCompose.md )
