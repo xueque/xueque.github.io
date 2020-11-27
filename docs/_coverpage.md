@@ -6,11 +6,11 @@
 
 #### 领域
 
-- 前端 Vue + ElementUI
-- 后端 SpringCloudAlibaba + maven
+- 微服务 SpringCloudAlibaba + maven
 - 嵌入式 Stm32 + CMake
 - 运维 DockerCompose
 - 移动端 UniApp
+- Web 端 Vue + ElementUI
 - 桌面端 Electron
 
 [docsify github](https://github.com/docsifyjs/docsify/)
