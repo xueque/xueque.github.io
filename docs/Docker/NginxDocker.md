@@ -74,18 +74,18 @@ server {
 	  try_files $uri $uri/ /index.html;		#解决vue的路由在nginx中刷新出现404
       index  index.html index.htm;
     }
- 	location ~ /api/ {
+    location ~ /api/ {
 	# 访问地址 http://192.168.0.172:8888/api/
       proxy_pass http://192.168.0.172:8888;
     }
-	location ~ /eoms_core/ {
+    location ~ /eoms_core/ {
       proxy_pass http://192.168.0.172:8080;
     }
     error_page   500 502 503 504  /50x.html;
     location = /50x.html {
         root   /usr/share/nginx/html/dist;
     }
-	location = /report.html {
+    location = /report.html {
         root   /usr/share/nginx/html/dist;
     }
 	
