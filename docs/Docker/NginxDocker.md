@@ -11,16 +11,15 @@ services:
     restart: always
     image: nginx
     container_name: nginx-dashboard
+    environment:
+      - TZ=Asia/Shanghai
     ports:
-
       - 80:80
-            - 443:443
-        volumes:
-            - ./conf/conf.d/:/etc/nginx/conf.d/
-                  - ./html/:/usr/share/nginx/html/
-                  - ./logs/:/var/log/nginx/
-environment:
-  - TZ=Asia/Shanghai
+      - 443:443
+    volumes:
+      - ./conf/conf.d/:/etc/nginx/conf.d/
+      - ./html/:/usr/share/nginx/html/
+      - ./logs/:/var/log/nginx/
 ```
 
 ##### nginx\conf\ nginx.conf
