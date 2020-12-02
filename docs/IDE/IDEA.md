@@ -41,3 +41,4 @@ pojo to json
 |<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>v</kbd>			    |抽取为变量  .var|
 |<kbd>ctrl</kbd> + <kbd>+</kbd> / <kbd>-</kbd> 		    	|代码收缩|
 |<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>l</kbd>              |js代码格式化|
+|<kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>x</kbd>              |在文件管理器中打开|
