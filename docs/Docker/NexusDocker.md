@@ -12,12 +12,12 @@ services:
     restart: always
     image: heyoui/nexus3
     container_name: nexus
+    environment:
+      - TZ=Asia/Shanghai
     privileged: true
     ports:
       - 8081:8081
     volumes:
       - /usr/local/docker/nexus/data:/nexus-data
-environment:
-  - TZ=Asia/Shanghai      
 ```
 
