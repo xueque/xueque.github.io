@@ -11,11 +11,18 @@ version: '3'
 services:
   db:
     image: mariadb
+    environment:
+      - TZ=Asia/Shanghai
     volumes:
       - database:/var/lib/mysql:rw
     restart: always
     networks:
       - private
+    command: [                        #使用 command 可以覆盖容器启动后默认执行的命令
+            '--character-set-server=utf8mb4',            #设置数据库表的数据集
+            '--collation-server=utf8mb4_unicode_ci',    #设置数据库表的数据集
+            '--default-time-zone=+8:00'                    #设置mysql数据库的 时区问题！！！！ 而不是设置容器的时区问题！！！！
+    ]
     environment:
       MYSQL_ROOT_PASSWORD: chevereto_root
       MYSQL_DATABASE: chevereto
@@ -26,6 +33,8 @@ services:
     depends_on:
       - db
     image: nmtan/chevereto
+    environment:
+      - TZ=Asia/Shanghai
     restart: always
     networks:
       - private
@@ -45,8 +54,6 @@ networks:
 volumes:
   database:
   chevereto_images:
-environment:
-  - TZ=Asia/Shanghai  
 
 ```
 
