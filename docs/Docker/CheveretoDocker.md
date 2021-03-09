@@ -1,5 +1,3 @@
-{docsify-updated}
-# Chevereto Docker
 
 开源图床
 
