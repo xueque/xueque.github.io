@@ -1,5 +1,3 @@
-{docsify-updated}
-# Nacos Docker
 
 本项目是 [Nacos](https://github.com/alibaba/nacos) Server的docker镜像的build源码,以及Nacos server 在docker的单机和集群的运行例子.
 

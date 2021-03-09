@@ -1,6 +1,6 @@
-{docsify-updated}   
-#  Node
-##  Node 搭建环境
+    
+# Node 搭建环境
+   
 ### 第一步:安装 nodeJs
 ### 第二步:安装 cnpm 和淘宝源
 ```
@@ -18,7 +18,7 @@ npm install -g @vue/cli
 vue --version
 ```
 
-## Node 旧版本卸载 (Windows)     
+# Node 旧版本卸载 (Windows)     
 ### 第一步   
 
 ```

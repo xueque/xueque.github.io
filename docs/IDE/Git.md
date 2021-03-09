@@ -1,5 +1,4 @@
-{docsify-updated} 
-# 通用 git 忽略提交
+### 通用 git 忽略提交
 .gitignore
 ```gitignore
 target/

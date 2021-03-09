@@ -1,5 +1,3 @@
-{docsify-updated}
-# Jenkins Docker
 
 持续集成工具
 

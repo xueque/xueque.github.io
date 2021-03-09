@@ -2,24 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>XueQue</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+  <style>
+    article h1:first-child{
+      display: inline-block;
+      margin-bottom: 0;
+      font-size: 50px;
+    }
+    article h1:first-child+p{
+      display: inline-block;
+      color: #ff6868;
+      margin-left: 45px;
+      margin-bottom: 0;
+    }
+    /*#updated*/
+    footer{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
 </head>
 <body>
   <div id="app">加载中</div>
   <script>
     window.$docsify = {
-      name: 'xueque',
+      // 定义路由别名
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+        '/.*/_navbar.md': '/_navbar.md',
+      },
+      // 文档标题，显示在侧栏顶部
+      name: '雪雀的笔记本',
+      // 点击文档标题后跳转的链接地址
+      nameLink: '/',
+      // 设置路由模式
+      // routerMode: 'history',
       repo: 'https://github.com/xueque',
+      // 外部链接的打开方式
+      externalLinkTarget: '_self',
       loadNavbar: true,
       loadSidebar: true,
-      subMaxLevel: 3,
+      // 根据 _sidebar.md 的内容自动为每个页面增加标题
+      autoHeader: true,
+      subMaxLevel: 1,
       coverpage: true,
+      // 切换页面后是否自动跳转到页面顶部
       auto2top: true,
       onlyCover: true,
+      // themeColor: '#3F51B5',
+      mergeNavbar: true,
       //  通过 {docsify-updated} 变量显示文档更新日期
       formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}',
       search: {
@@ -29,36 +65,46 @@
         noData: '找不到结果',
       },
       copyCode: {
-        buttonText : '点击复制',
+        buttonText : '复制',
         errorText  : '错误',
-        successText: '复制'
+        successText: '成功'
       },
-      pagination: {
-        previousText: '上一章节',
-        nextText: '下一章节',
-        crossChapter: true,
-        crossChapterText: true,
-      },
+      notFoundPage: '404.md',
+      // 自定义插件
       plugins: [
-        function(hook) {
-          var footer = [
-            '<hr/>',
-            '<footer>',
-            '<span><a href="https://github.com/xueque">xueque </a> &copy;2020.</span>',
-            '<span>Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
-            '</footer>'
-          ].join('');
+        function(hook, vm) {
+          // 每次开始解析 Markdown 内容时调用
+          hook.beforeEach(function(content) {
+            const titel = `修改日期:  {docsify-updated}\n`
+            const line = '******\n'
+            return titel + line + content + line;
+          })
 
-          hook.afterEach(function(html) {
-            return html + footer;
+          // 解析成 html 后调用。
+          hook.afterEach(function(html, next) {
+            const footer = [
+              '<footer>',
+              `<div>Docsify version: ${window.Docsify.version}</div>`,
+              '<div><a href="https://github.com/xueque">xueque </a> &copy;2020.</div>',
+              '</footer>'
+            ].join('');
+            // 异步处理完成后调用 next(html) 返回结果
+            next(html + footer);
           });
         }
       ]
+      // pagination: {
+      //   previousText: '上一章节',
+      //   nextText: '下一章节',
+      //   crossChapter: true,
+      //   crossChapterText: true,
+      // }
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!--分页-->
+<!--  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>-->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <!--忽略某张图片 ![](image.png ":no-zoom")-->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>

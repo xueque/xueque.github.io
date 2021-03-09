@@ -1,6 +1,3 @@
-{docsify-updated}
-# 书单    
-{docsify-updated}
 - Head First 设计模式  
 - 程序员修炼之道  
 - Java 编程思想(第四版)  
