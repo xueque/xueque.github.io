@@ -1,5 +1,4 @@
-{docsify-updated}   
-# Maven 配置（Windows）   
+### Maven 配置（Windows）   
 配置文件路径:   
 apache-maven/conf/settings.xml   
 ```xml

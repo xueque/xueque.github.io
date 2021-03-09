@@ -1,7 +1,5 @@
 {docsify-updated}   
 
-# MongoDB 配置（Windows）
-
 ##### 安装 MongoDB 启动服务失败,处理流程
 
 不要关闭安装程序,进行一下操作

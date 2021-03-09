@@ -1,5 +1,3 @@
-{docsify-updated} 
-# IDEA 配置 
 
 ###	导入配置 
 File => Mange IDEA Settings => Import Settings

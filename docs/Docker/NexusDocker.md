@@ -1,5 +1,3 @@
-{docsify-updated}
-# Nexus Docker
 
 依赖仓库
 
