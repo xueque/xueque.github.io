@@ -1,18 +1,15 @@
-<!-- _coverpage.md -->
+<!-- docs/_coverpage.md -->
 
-# xueque 的笔记本
 
-> 本站基于 docsify <small>3.5</small>。
+# 所有的认知都是一种偏见
+  
+[反对](http://192.168.0.1)
+[同意](/README.md)   
 
-#### 领域
+<!-- 背景图片 -->
 
-- 微服务 SpringCloudAlibaba + maven
-- 嵌入式 Stm32 + CMake
-- 运维 DockerCompose
-- 移动端 UniApp
-- Web 端 Vue + ElementUI
-- 桌面端 Electron
+<!-- ![](_media/bg.png)-->
 
-[docsify github](https://github.com/docsifyjs/docsify/)
-[docsify doc](https://docsify.js.org/#/zh-cn/)
-[开始阅读](/README.md)
+<!-- 背景色 -->
+
+<!--![color](#f0f0f0)-->
