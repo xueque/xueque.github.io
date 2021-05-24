@@ -1,5 +1,6 @@
-#
-# IDEA配置
+   
+# IDEA配置   
+   
 >####	导入配置   
 ```shell
 File => Mange IDEA Settings => Import Settings

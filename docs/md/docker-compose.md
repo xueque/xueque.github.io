@@ -1,5 +1,23 @@
 `测试环境:树莓派-4b UbuntuServer 64-bit`   
-#   
+# 安装    
+```shell
+# 检查版本
+python3 -V
+# 更新 apt-get
+sudo apt-get update
+# 安装 pip3
+sudo apt-get install -y python3-pip
+# 更新 pip
+pip install --upgrade pip
+sudo pip --version
+# 安装环境
+apt-get install libffi-dev
+# 安装 docker-compose
+sudo pip3 install docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+# 校验
+docker-compose version
+```
 # mysql
 ```yaml
 # 创建目录脚本
