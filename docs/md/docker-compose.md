@@ -1,5 +1,7 @@
+    
 `测试环境:树莓派-4b UbuntuServer 64-bit`   
-# 安装    
+   
+# 安装   
 ```shell
 # 检查版本
 python3 -V
@@ -207,4 +209,44 @@ services:
       - 1883:1883 # mqtt 连接端口 
       - 61613:15672 # stomp 连接端口 
     #  - 25672:25672 # 集群
+```
+# mongodb   
+   
+`测试环境:阿里云 CentOS 7.9 64-bit`
+   
+```shell
+# 创建目录
+# mkdir -p /usr/local/docker/mongodb/{mongodb-db,etc/localtime} && cd /usr/local/docker/mongodb/ && chmod -R 777 /usr/local/docker/mongodb/
+# 
+# docker-compose up -d
+# docker-compose down
+# docker-compose restart
+version: "3"
+services: 
+  mongodb:
+    image: "mongo:4.1"
+    container_name: "mongo"
+    restart: "always"
+    environment: 
+      - "MONGO_INITDB_ROOT_USERNAME=root"
+      - "MONGO_INITDB_ROOT_PASSWORD=passwd"
+    volumes: 
+      - "mongodb-db:/data/db"
+      - "/etc/localtime:/etc/localtime"
+    ports: 
+      - "27017:27017"
+  
+  mongo-express:
+    image: "mongo-express:0.49"
+    container_name: "mongo-express"
+    restart: "always"
+    environment: 
+      - "ME_CONFIG_MONGODB_ADMINUSERNAME=root"
+      - "ME_CONFIG_MONGODB_ADMINPASSWORD=passwd"
+      #- "ME_CONFIG_MONGODB_SERVER="
+    ports: 
+      - "8081:8081"
+
+volumes: 
+  mongodb-db:
 ```
