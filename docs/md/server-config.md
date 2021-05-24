@@ -1,4 +1,5 @@
->#### Ubuntu命令
+> #### Ubuntu命令
+
 ```shell
 # 停止
 sudo halt 
@@ -20,9 +21,37 @@ tar -zxvf xxxx.tar.gz
 # 创建软连接
 ln -s 源地址   目的地址
 #eg. ln  -s  /opt/Linux/root_dir  /home/lp/roo_dir
+
+#查询当前硬盘使用情况
+df -hl
+#查看内存信息
+free
+
+# 查看网卡检查
+ifconfig
+
+# 查看计算机名
+sudo hostname
+# 修改计算机名
+sudo vi /etc/hostname
+sudo vi /etc/hosts
 ```
 
->#### 配置防火墙
+> #### vim
+
+ ```shell
+# 退出插入,进入命令行,保存并退出
+exit:wq  
+# 剪切
+exit x    
+# 删除行
+exit dd    
+# 删除缓存
+rm /etc/systemd/.resolved.conf.swp   
+```
+
+> #### 配置防火墙
+
 ```shell
 
 # 点亮网口灯
@@ -38,7 +67,8 @@ sudo ufw reload
 sudo /etc/init.d/networking restart
 ```
 
->#### 配置 ssh root 远程登陆
+> #### 配置 ssh root 远程登陆
+
 ```shell
 # 首先设置root账户的密码
 sudo passwd root
@@ -47,7 +77,9 @@ sudo vim /etc/ssh/sshd_config
 # 最后重启生效
 sudo service ssh restart
 ```
+
 修改内容如下:
+
 ```shell
 33 #LoginGraceTime 2m
 34 #PermitRootLogin prohibit-password
@@ -58,8 +90,8 @@ sudo service ssh restart
 35 StrictModes yes
 ```
 
+> #### 配置网卡文件
 
->#### 配置网卡文件
 ```shell
 sudo vim /etc/network/interfaces
 auto enp0s3
@@ -73,7 +105,8 @@ sudo service networking restart
 ifconfig
 ```
 
->#### 使用国内镜像源
+> #### 使用国内镜像源
+
 ```shell
 #备份
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
@@ -81,7 +114,9 @@ sudo cp /etc/apt/sources.list.bak /etc/apt/sources.list
 #修改
 sudo vim /etc/apt/sources.list
 ```
+
 替换为如下:
+
 ```shell
 deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted universe multiverse
@@ -95,7 +130,9 @@ deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted unive
 deb-src http://mirrors.aliyun.com/ubuntu/ xenial-proposed main restricted universe multiverse
 
 ```
->#### DNS配置   
+
+> #### DNS配置
+
 ```shell
 sudo vi /etc/resolv.conf
 # 这里用的是阿里云的DNS服务器
@@ -106,8 +143,8 @@ apt-get update
 apt-get upgrade
 ```
 
+> #### 同步网络时间
 
->#### 同步网络时间   
 ```shell
 # 修改时区
 timedatectl set-timezone "Asia/Shanghai"

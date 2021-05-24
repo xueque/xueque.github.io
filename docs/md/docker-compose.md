@@ -1,6 +1,5 @@
-
-`测试环境:树莓派-4b UbuntuServer 64-bit`
-#
+`测试环境:树莓派-4b UbuntuServer 64-bit`   
+#   
 # mysql
 ```yaml
 # 创建目录脚本

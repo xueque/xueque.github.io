@@ -1,9 +1,8 @@
->#### 领域
-- 微服务 SpringCloudAlibaba + maven
-- 嵌入式 Stm32 + CMake
-- 运维 DockerCompose
-- 移动端 UniApp
-- Web 端 Vue + ElementUI
-- 桌面端 Electron
+> #### 领域
 
+- javaEE => 微服务 => SpringCloudAlibaba
+- h5 => vue-element-admin|uniApp
+- 单片机 => platformio => Arduino|STM32CubeMX
+- 运维 => python => DockerCompose
+- 物联网 => modbus|西门子ppi|mqtt
 
