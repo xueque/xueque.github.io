@@ -21,7 +21,7 @@ docker-compose version
 # mysql
 ```yaml
 # 创建目录脚本
-# mkdir -p /usr/local/docker/mysql/{mysql-data,conf.d,docker-entrypoint-initdb.d} $$ chmod -R 777  /usr/local/docker/mysql/ $$ cd /usr/local/docker/mysql/
+# mkdir -p /usr/local/docker/mysql/{mysql-data,conf.d,docker-entrypoint-initdb.d} && chmod -R 777  /usr/local/docker/mysql/ && cd /usr/local/docker/mysql/
 # 
 # docker-compose up -d
 # docker-compose down
@@ -61,7 +61,7 @@ services:
 # nacos
 ```yaml
 # 创建目录脚本
-# mkdir -p /usr/local/docker/nacos/{logs,init.d} $$ chmod -R 777 /usr/local/docker/nacos/ $$ cd /usr/local/docker/nacos/
+# mkdir -p /usr/local/docker/nacos/{logs,init.d} && chmod -R 777 /usr/local/docker/nacos/ && cd /usr/local/docker/nacos/
 # 
 # docker-compose up -d
 # docker-compose down
@@ -99,7 +99,7 @@ networks:
 # nginx
 ```yaml
 # 创建目录
-# mkdir -p /usr/local/docker/nginx/{conf.d,html,logs} $$ chmod -R 777 /usr/local/docker/nginx/ $$ cd /usr/local/docker/nginx/
+# mkdir -p /usr/local/docker/nginx/{conf.d,html,logs} && chmod -R 777 /usr/local/docker/nginx/ && cd /usr/local/docker/nginx/
 # 
 # docker-compose up -d
 # docker-compose down
@@ -131,7 +131,7 @@ networks:
 # redis
 ```yaml
 # 创建目录脚本
-# mkdir -p /usr/local/docker/redis/{conf,data,logs} $$ chmod -R 777 /usr/local/docker/redis/ $$ cd /usr/local/docker/redis/
+# mkdir -p /usr/local/docker/redis/{conf,data,logs} && chmod -R 777 /usr/local/docker/redis/ && cd /usr/local/docker/redis/
 
 # docker-compose up -d
 # docker-compose down
@@ -154,7 +154,7 @@ services:
 # elasticsearch
 ```yaml
 # 创建目录脚本
-# mkdir -p /usr/local/docker/elasticsearch/{data,logs,plugins} $$ chmod -R 777 /usr/local/docker/elasticsearch/ $$ cd /usr/local/docker/elasticsearch/
+# mkdir -p /usr/local/docker/elasticsearch/{data,logs,plugins} && chmod -R 777 /usr/local/docker/elasticsearch/ && cd /usr/local/docker/elasticsearch/
 # 
 # docker-compose up -d
 # docker-compose down
@@ -183,7 +183,7 @@ services:
 # rabbitmq
 ```yaml
 # 创建目录脚本
-# mkdir -p /usr/local/docker/rabbitmq/{data,logs} $$ chmod -R 777 /usr/local/docker/rabbitmq/ $$ cd /usr/local/docker/rabbitmq/
+# mkdir -p /usr/local/docker/rabbitmq/{data,logs} && chmod -R 777 /usr/local/docker/rabbitmq/ && cd /usr/local/docker/rabbitmq/
 # 
 # docker-compose up -d
 # docker-compose down
