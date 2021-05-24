@@ -2,6 +2,10 @@
   "name": "xueque_docsify",
   "version": "1.0.0",
   "scripts": {
-    "dev": "docsify serve docs"
+    "dev": "docsify serve docs",
+    "init": "npm i docsify-cli"
+  },
+  "dependencies": {
+    "docsify-cli": "^4.4.3"
   }
 }
