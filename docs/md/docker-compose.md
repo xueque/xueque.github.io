@@ -210,6 +210,30 @@ services:
       - 61613:15672 # stomp 连接端口 
     #  - 25672:25672 # 集群
 ```
+
+# emq-x
+```shell
+# 创建目录
+# mkdir -p /usr/local/docker/emqx/ && chmod -R 777  /usr/local/docker/emqx/ && cd /usr/local/docker/emqx/
+# 
+# docker-compose up -d
+# docker-compose down
+# docker-compose restart
+version: "3"
+services: 
+  emqx:
+    image: emqx/emqx:4.3.0
+    container_name: emqx
+    restart: always
+    ports:
+      - 1883:1883
+      - 8081:8081
+      - 8083:8083
+      - 8883:8883
+      - 8084:8084
+      - 18083:18083
+```
+
 # mongodb   
    
 `测试环境:阿里云 CentOS 7.9 64-bit`
